@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-int (*opfunc)(va_list, flags_t *);
+int (*pfunc)(va_list, flags_t *);
 const char *p;
 va_list arguments;
 flags_t flags = {0, 0, 0};
@@ -30,11 +30,11 @@ while (get_flag(*p, &flags))
 p++;
 pfunc = get_print(*p);
 count += (pfunc) ?
-pfunc(arguments, &flags);
+pfunc(arguments, &flags):
 _printf("%%%c", *p);
 }
 else
-count += -putchar(*p);
+count += _putchar(*p);
 }
 _putchar(-1);
 va_end(arguments);
