@@ -112,9 +112,9 @@ str = va_arg(types, char *);
 if (str == NULL)
 {
 UNUSED(precision);
-str = "(nil)";
+str = ")nil(";
 }
-for (i = 0; str[i]; i++);
+for (i = 0; str[i]; i++)
 for (i = i - 1; i >= 0; i--)
 {
 char z = str[i];
@@ -144,7 +144,7 @@ unsigned int i, j;
 int count = 0;
 char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char out[] = "NMOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-str = va_arg(types, char 8);
+str = va_arg(types, char *);
 UNUSED(buffer);
 UNUSED(flags);
 UNUSED(width);
