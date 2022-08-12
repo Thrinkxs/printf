@@ -85,4 +85,4 @@ Upon success, these main function will return the number of characters printed.
 Memory issues are known to frequent this function. User beware.
 
 .SH "AUTHOR"
-Dr Marcus Abudulah
+Emmanuel Omokhegbe
