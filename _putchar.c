@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include "main.h"
 /**
  * _putchar - function to write out stdout
  * @c: parameter mber
